@@ -34,6 +34,7 @@ Template GTM de **101lab Signal**, la plateforme de gestion du consentement (CMP
 
 | Version | Script chargé |
 |---|---|
+| 2.0.1 | `https://cdn.101-lab.com/signal/2.0.1/101lab-signal.min.js` |
 | 2.0.0 | `https://cdn.101-lab.com/signal/2.0.0/101lab-signal.min.js` |
 
 ## Licence
