@@ -8,14 +8,34 @@ Template GTM de **101lab Signal**, la plateforme de gestion du consentement (CMP
 
 ## Ce que fait le template
 
-- Pose les valeurs par défaut du Consent Mode v2 sur le déclencheur « Consent Initialization - All Pages » :
-  - refusé dans les pays configurés (par défaut EEE, Royaume-Uni, Suisse), accordé ailleurs ;
+- Pose les valeurs par défaut du Consent Mode v2 :
+  - refusé dans les pays configurés (par défaut EEE, Royaume-Uni, Suisse, Serbie) ;
+  - accordé ailleurs ;
   - `security_storage` toujours accordé.
-- Réapplique le choix déjà mémorisé du visiteur.
-- Sinon, charge le bandeau de consentement 101lab Signal depuis une URL figée et versionnée.
+- Réapplique le choix déjà mémorisé du visiteur, sans recharger le bandeau.
+- Sinon, charge le bandeau de consentement 101lab Signal depuis une URL figée et versionnée sur `cdn.101-lab.com`. C'est le seul script injecté, et aucun service tiers n'est appelé avant le consentement.
 
-## Statut
+## Installation
 
-En préparation : le template sera publié ici lors de la première version (2.0.0).
+1. Ajouter le modèle « 101lab Signal - Consent Mode v2 » depuis la galerie de modèles de la communauté, ou importer `template.tpl`.
+2. Créer une balise avec ce modèle et renseigner au minimum l'URL de la politique de confidentialité.
+3. Déclencheur : **Consent Initialization - All Pages**.
+4. Tester en mode Aperçu avant de publier le conteneur.
 
-Ce dépôt suit la structure demandée par la [galerie de modèles de la communauté GTM](https://developers.google.com/tag-platform/tag-manager/templates/gallery). Le code du template sera sous licence Apache 2.0.
+## Réglages
+
+- **Consent Mode :** pays où le bandeau s'affiche, `wait_for_update`, `ads_data_redaction`, `url_passthrough`.
+- **Apparence :** logo, couleurs, police, lien « Powered by 101lab ».
+- **Textes :** surtitre, titre et introduction du bandeau.
+- **Cookies :** tableau des cookies par catégorie.
+- **Configuration avancée :** JSON.
+
+## Versions
+
+| Version | Script chargé |
+|---|---|
+| 2.0.0 | `https://cdn.101-lab.com/signal/2.0.0/101lab-signal.min.js` |
+
+## Licence
+
+Le code du template est sous licence Apache 2.0 (voir `LICENSE`). Le script du bandeau chargé par le template est la propriété de 101lab.
