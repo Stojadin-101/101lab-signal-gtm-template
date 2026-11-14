@@ -2,6 +2,9 @@ homepage: "https://101-lab.com"
 documentation: "https://github.com/Stojadin-101/101lab-signal-gtm-template#readme"
 versions:
   # Le SHA est celui du commit qui contient la version de template.tpl à publier.
+  - sha: b3443df03b18cc88df7b3dae5dcc432a7868bb28
+    changeNotes: |2
+      101lab Signal 2.0.1 : correctif du défilement de l'écran de personnalisation sur les sites qui utilisent une bibliothèque de défilement fluide (Lenis...).
   - sha: a5b4c14619563fd97ea41ad5afe56311d472435f
     changeNotes: |2
       101lab Signal 2.0.0 : première version publique.
