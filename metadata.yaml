@@ -1,0 +1,8 @@
+homepage: "https://101-lab.com"
+documentation: "https://github.com/Stojadin-101/101lab-signal-gtm-template#readme"
+versions:
+  # Le SHA est celui du commit qui contient la version de template.tpl à publier.
+  - sha: a5b4c14619563fd97ea41ad5afe56311d472435f
+    changeNotes: |2
+      101lab Signal 2.0.0 : première version publique.
+      Consent Mode v2 par défaut (refusé dans les pays configurés, accordé ailleurs), choix mémorisé réappliqué, bandeau chargé depuis cdn.101-lab.com.
