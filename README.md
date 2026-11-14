@@ -13,7 +13,7 @@ Template GTM de **101lab Signal**, la plateforme de gestion du consentement (CMP
   - accordé ailleurs ;
   - `security_storage` toujours accordé.
 - Réapplique le choix déjà mémorisé du visiteur, sans recharger le bandeau.
-- Sinon, charge le bandeau de consentement 101lab Signal depuis une URL figée et versionnée sur `cdn.101-lab.com`. C'est le seul script injecté, et aucun service tiers n'est appelé avant le consentement.
+- Sinon, charge le bandeau de consentement 101lab Signal depuis `cdn.101-lab.com`, à l'adresse canal de la version 2. Les correctifs 2.x s'appliquent donc sans mettre à jour le modèle. C'est le seul script injecté, et aucun service tiers n'est appelé avant le consentement.
 
 ## Installation
 
@@ -34,6 +34,7 @@ Template GTM de **101lab Signal**, la plateforme de gestion du consentement (CMP
 
 | Version | Script chargé |
 |---|---|
+| 2.0.2 et suivantes (2.x) | `https://cdn.101-lab.com/signal/2/101lab-signal.min.js` (adresse canal : toujours la dernière version 2.x) |
 | 2.0.1 | `https://cdn.101-lab.com/signal/2.0.1/101lab-signal.min.js` |
 | 2.0.0 | `https://cdn.101-lab.com/signal/2.0.0/101lab-signal.min.js` |
 

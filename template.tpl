@@ -327,9 +327,10 @@ const makeNumber = require('makeNumber');
 const JSON = require('JSON');
 const logToConsole = require('logToConsole');
 
-// URL exacte et figée du script : doit correspondre à la permission « Injecte des scripts ».
-// TODO : hébergement à choisir ; une nouvelle version du script = une nouvelle version du template.
-const SCRIPT_URL = 'https://cdn.101-lab.com/signal/2.0.1/101lab-signal.min.js';
+// Adresse canal de la version majeure 2 : toujours la dernière version 2.x du script
+// (correctifs sans mise à jour du conteneur). Doit correspondre exactement à la permission
+// « Injecte des scripts ». Une version 3 aura sa propre adresse et un nouveau template.
+const SCRIPT_URL = 'https://cdn.101-lab.com/signal/2/101lab-signal.min.js';
 const COOKIE_NAME = '__101labSignalState';
 // Ordre des signaux dans le cookie (voir src/consent.js).
 const COOKIE_ORDER = [
@@ -599,7 +600,7 @@ ___WEB_PERMISSIONS___
           "value": {
             "type": 2,
             "listItem": [
-              { "type": 1, "string": "https://cdn.101-lab.com/signal/2.0.1/101lab-signal.min.js" }
+              { "type": 1, "string": "https://cdn.101-lab.com/signal/2/101lab-signal.min.js" }
             ]
           }
         }
@@ -699,4 +700,4 @@ scenarios: []
 
 ___NOTES___
 
-101lab Signal 2.0.1 - le consentement qui fiabilise vos signaux Google et Meta. Script chargé depuis https://cdn.101-lab.com/signal/2.0.1/101lab-signal.min.js.
+101lab Signal 2.0.2 - le consentement qui fiabilise vos signaux Google et Meta. Script chargé depuis l'adresse canal https://cdn.101-lab.com/signal/2/101lab-signal.min.js (dernière version 2.x, mise à jour automatiquement).
